@@ -1,0 +1,34 @@
+@font-face{
+    font-family: CircadianSans;
+    src: url(/fonts/Graphik-Regular-Web.woff) format("woff");
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face{
+    font-family: CircadianSans;
+    src: url(/fonts/Graphik-Semibold-Web.woff) format("woff");
+    font-style: normal;
+    font-weight: 800;
+}
+
+@font-face{
+    font-family: AvenirNext;
+    src: url(/fonts/avenir-light.woff) format("woff");
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face{
+    font-family: AvenirNext;
+    src: url(/fonts/avenir-bold.woff) format("woff");
+    font-style: normal;
+    font-weight: 800;
+}
+
+@font-face{
+    font-family: AvenirBlack;
+    src: url(/fonts/avenir-black.woff) format("woff");
+    font-style: normal;
+    font-weight: 800;
+}

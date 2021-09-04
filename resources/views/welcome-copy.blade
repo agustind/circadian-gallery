@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <title>Circadian Gallery</title>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>
+    </head>
+    <body class="antialiased">
+
+        @if (Route::has('login'))
+
+            <div class="hidden fixed top-2 right-0 px-6 py-4 sm:block">
+                @auth
+                    <a href="{{ url('/dashboard') }}" class="text-gray-700 underline">Dashboard</a>
+                @else
+
+                    <x-btn href="{{ route('login') }}" label="Artists login" />
+                    
+                @endauth
+            </div>
+
+        @endif
+
+        <div class="min-h-screen grid grid-cols-2">
+           
+            <div class="relative">
+                
+                <div class="centered">
+                    
+                    <h1 class="mb-0">Circadian&nbsp;Gallery</h1>
+                    
+                    <h3 class="mb-24">
+                        A curated gallery auctioning one piece every 24 hours.
+                    </h3>
+
+                    <x-btn href="/auction" label="Current auction" />
+
+                </div>
+
+            </div>
+
+            <div class="bg-image" style="background-image: url(/images/intro.jpg)">
+
+            </div>
+           
+        </div>
+        
+        <div class="min-h-screen bg-gray-200 relative">
+
+            <div class="centered bg-white rounded-lg p-12" style="width: 100%; max-width: 500px">
+
+                <h2 class="mb-4 font-bold">Artist application form</h2>
+
+                <x-text-input class="block" placeholder="Your name" />
+                <x-text-input placeholder="Your email" class="mt-4" />
+                <x-text-input placeholder="Your work" class="mt-4" />
+                
+                <div class="text-right mt-8">
+                    <x-btn href="{{ route('login') }}" class="inline-block" label="Submit application" />
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

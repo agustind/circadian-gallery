@@ -1,0 +1,63 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import "@uppy/core/dist/style.min.css";
+@import "@uppy/drag-drop/dist/style.min.css";
+@import "@uppy/progress-bar/dist/style.min.css";
+
+@import "fonts.css";
+
+
+
+
+body{
+    font-family: CircadianSans, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,sans-serif;
+    font-size: 1em;
+}
+
+.drop, .drop button:focus, .uppy-DragDrop-input:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+h1{
+    font-size: 3em;
+    font-family: AvenirBlack;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.piece{
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+}
+
+.bg-image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.uppy-DragDrop-label{
+    opacity: 0.3;
+}
+
+
+
+.bids-button{
+    display: none;
+}
+
+
+.only-if-has-bids{
+    display: none;
+}
